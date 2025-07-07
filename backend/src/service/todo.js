@@ -11,6 +11,22 @@ const todoService = (repository) => {
         throw err;
       }
     },
+
+    patchTodo: async (id, completed) => {
+      try {
+        return await repository.patchTodo(id, completed);
+      } catch (err) {
+        throw err;
+      }
+    },
+    
+    deleteTodo: async (id) => {
+      try {
+        return await repository.deleteTodo(id);
+      } catch (err) {
+        throw err;
+      }
+    },
   };
 };
 
