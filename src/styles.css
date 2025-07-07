@@ -1,22 +1,8 @@
-.todo-app {
-    font-family: sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/** add todo **/
-.add-todo {
-    margin-left: 0.5rem;
-}
-
-/** todo list **/
-.todo-list {
-    margin-top: 1rem;
-    text-align: left;
-    list-style: none;
-}
-
-/** todo item **/
-.todo-item {
-    font-family: monospace;
-    cursor: pointer;
-    line-height: 1.5;
+body {
+  font-family: "Kanit";
+  min-height: 100vh;
 }
