@@ -26,6 +26,7 @@ const TodoForm = () => {
         <div className=" flex justify-between gap-2">
           <input
             {...register("task", { required: true })}
+            aria-label="New task input"
             placeholder="add your task here"
             className="flex-1 px-4 py-2 border border-indigo-600 bg-indigo-50 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           />

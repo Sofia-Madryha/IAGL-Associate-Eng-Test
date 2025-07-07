@@ -17,23 +17,27 @@ const Todo = ({ todo }) => {
   return (
     <li className="flex justify-between text-lg p-2 border-b border-indigo-200">
       <div className="flex items-center gap-3">
-        <input
-          type="checkbox"
-          checked={todo.completed ?? false}
-          onChange={handleToggle}
-          className="w-5 h-5 text-indigo-600 rounded"
-        />
-        <span
-          className={`text-lg ${
-            todo.completed ? "line-through text-gray-800" : ""
-          }`}
-        >
-          {todo.task}
-        </span>
+        <label className="flex items-center gap-3 cursor-pointer w-full">
+          <input
+            name="task"
+            type="checkbox"
+            checked={todo.completed}
+            onChange={handleToggle}
+            className="w-5 h-5 accent-indigo-500 rounded"
+          />
+          <span
+            className={`flex-grow text-lg ${
+              todo.completed ? "line-through text-gray-400" : ""
+            }`}
+          >
+            {todo.task}
+          </span>
+        </label>
       </div>
       <button
         onClick={onDelete}
         className="text-indigo-300 hover:text-indigo-600 transition"
+        aria-label="Delete task"
       >
         <DeleteIcon />
       </button>
